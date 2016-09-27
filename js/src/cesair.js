@@ -1,6 +1,8 @@
 'use strict'
 
-import { mod } from './support.js'
+import {
+  mod
+} from './support.js'
 
 const crypt = (str, shift) => {
   return str.split('').map(el => {

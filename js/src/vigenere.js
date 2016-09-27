@@ -1,6 +1,9 @@
 'use strict'
 
-import { mod, randomKey } from './support.js'
+import {
+  mod,
+  randomKey
+} from './support.js'
 
 const crypt = (str, key) => {
   return str.split('').map((el, i) => {

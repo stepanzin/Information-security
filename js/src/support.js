@@ -9,7 +9,16 @@ const randomKey = (len) => {
   return text
 }
 
+const randomKeyBin = (len) => {
+  let text = ''
+
+  for (let i = 0; i < len * 8; i++)
+    text += (Math.random() > 0.5) ? 1 : 0
+  return text
+}
+
 export {
   mod,
-  randomKey
+  randomKey,
+  randomKeyBin
 }
