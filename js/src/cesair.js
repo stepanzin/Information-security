@@ -1,6 +1,6 @@
 'use strict'
 
-const mod = (x, y) => (x - y * Math.floor(x / y))
+import { mod } from './support.js'
 
 const crypt = (str, shift) => {
   return str.split('').map(el => {
