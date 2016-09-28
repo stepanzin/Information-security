@@ -1,6 +1,6 @@
 const mod = (x, y) => (x - y * Math.floor(x / y))
 
-const randomKey = (len) => {
+const randomKey = len => {
   let text = ''
   let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
@@ -9,7 +9,7 @@ const randomKey = (len) => {
   return text
 }
 
-const randomKeyBin = (len) => {
+const randomKeyBin = len => {
   let text = ''
 
   for (let i = 0; i < len * 8; i++)
