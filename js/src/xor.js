@@ -4,14 +4,14 @@ import {
   randomKeyBin
 } from './support.js'
 
-const strToBin = (str) => {
+const strToBin = str => {
   return str.split('').map(e => {
     let bin = e.charCodeAt(0).toString(2)
     return '0'.repeat(8 - bin.length) + bin
   }).join('')
 }
 
-const binToStr = (bin) => {
+const binToStr = bin => {
   let i = 0
   let str = []
   do
