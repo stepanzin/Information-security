@@ -117,7 +117,7 @@
     "radix": 1,
     "vars-on-top": 1,
     "wrap-iife": [1, "inside"],
-    "yoda": [1, "never"],
+    "yoda": [0, "never"],
 
     /* Strict Mode */
     "strict": [1, "never"],
@@ -171,7 +171,7 @@
     "no-new-object": 1,
     "no-spaced-func": 1,
     "no-ternary": 0,
-    "no-trailing-spaces": 1,
+    "no-trailing-spaces": 0,
     "no-underscore-dangle": 0,
     "no-unneeded-ternary": 1,
     "object-curly-spacing": 0, // see Babel section
@@ -206,7 +206,7 @@
     "max-len": [1, 121, 2],
     "max-params": 0,
     "max-statements": 0,
-    "no-bitwise": 1,
+    "no-bitwise": 0,
     "no-plusplus": 0,
 
     /* Babel */
