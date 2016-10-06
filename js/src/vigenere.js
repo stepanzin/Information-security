@@ -1,40 +1,44 @@
-'use strict'
-
 import {
   mod,
-  randomKey
+  randomKey,
 } from './support.js'
 
 const crypt = (str, key) => {
   return str.split('').map((el, i) => {
-    let e = el.charCodeAt()
-    let k = key[i].charCodeAt()
-    if (47 < e && 58 > e)
+    const e = el.charCodeAt()
+    const k = key[i].charCodeAt()
+    if (47 < e && 58 > e) {
       return String.fromCharCode(48 + mod((e + k - 48), 10))
-    else if (64 < e && 90 > e)
+    }
+    else if (64 < e && 90 > e) {
       return String.fromCharCode(65 + mod((e + k - 65), 26))
-    else if (96 < e && 123 > e)
+    }
+    else if (96 < e && 123 > e) {
       return String.fromCharCode(97 + mod((e + k - 97), 26))
+    }
     return String.fromCharCode(e)
   }).join('')
 }
 
 const decrypt = (str, key) => {
   return str.split('').map((el, i) => {
-    let e = el.charCodeAt()
-    let k = key[i].charCodeAt()
-    if (47 < e && 58 > e)
+    const e = el.charCodeAt()
+    const k = key[i].charCodeAt()
+    if (47 < e && 58 > e) {
       return String.fromCharCode(48 + mod((e - k - 48), 10))
-    else if (64 < e && 90 > e)
+    }
+    else if (64 < e && 90 > e) {
       return String.fromCharCode(65 + mod((e - k - 65), 26))
-    else if (96 < e && 123 > e)
+    }
+    else if (96 < e && 123 > e) {
       return String.fromCharCode(97 + mod((e - k - 97), 26))
+    }
     return String.fromCharCode(e)
   }).join('')
 }
 
-let pangram = "Pack my 98 box with five dozen liquor jugs. 135!"
-let keyPhrase = randomKey(pangram.length)
+const pangram = 'Pack my 98 box with five dozen liquor jugs. 135!'
+const keyPhrase = randomKey(pangram.length)
 let crypted = ''
 let decrypted = ''
 

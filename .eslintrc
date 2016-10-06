@@ -120,7 +120,7 @@
     "yoda": [0, "never"],
 
     /* Strict Mode */
-    "strict": [1, "never"],
+    "strict": [0, "never"],
 
     /* Variables */
     "no-catch-shadow": 0,
@@ -130,7 +130,7 @@
     "no-shadow": 1,
     "no-undef-init": 1,
     "no-undef": 1,
-    "no-undefined": 1,
+    "no-undefined": 0,
     "no-unused-vars": [1, { "vars": "local", "args": "after-used" }],
     "no-use-before-define": 1,
 
@@ -176,7 +176,7 @@
     "no-unneeded-ternary": 1,
     "object-curly-spacing": 0, // see Babel section
     "one-var": [1, "never"],
-    "operator-assignment": [1, "never"],
+    "operator-assignment": [0, "never"],
     "padded-blocks": [0, "never"],
     "quote-props": [0, "as-needed"],
     "quotes": [1, "single"],
