@@ -40,10 +40,29 @@ const randomKeyBin = len => {
   return text
 }
 
+const strToBin = str => {
+  return str.split('').map(e => {
+    const bin = e.charCodeAt(0).toString(2)
+    return '0'.repeat(8 - bin.length) + bin
+  }).join('')
+}
+
+const binToStr = bin => {
+  let i = 0
+  const str = []
+  do {
+    str.push(String.fromCharCode(parseInt(bin.slice(i, i += 8), 2)))
+  }
+  while (i !== bin.length)
+  return str.join('')
+}
+
 export {
   mod,
   randomInt,
   randomKey,
   randomKeyBin,
   randomIntUnicArray,
+  strToBin,
+  binToStr,
 }
