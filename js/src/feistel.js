@@ -38,7 +38,7 @@ class Feistel {
   }
 
   static cipher(left, right, rounds, key) {
-    
+
     for (let i = 0; i < rounds; i++) {
       const temp = right ^ this.f(left, key[i])
       right = left
