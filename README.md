@@ -17,10 +17,12 @@ The encryption step performed by a Caesar cipher is often incorporated as part o
 
 The encryption can also be represented using modular arithmetic by first transforming the letters into numbers, according to the scheme, *A = 0, B = 1,..., Z = 25.* Encryption of a letter  *x* by a shift n can be described mathematically as,
 
-f1
+![Formula](https://github.com/stepanzin/Information-security/blob/master/docs/Caesar1.gif?raw=true)
+
 Decryption is performed similarly,
 
-f2
+![Formula](https://github.com/stepanzin/Information-security/blob/master/docs/Caesar2.gif?raw=true)
+
 (There are different definitions for the modulo operation. In the above, the result is in the range 0...25. I.e., if *x+n* or *x-n* are not in the range 0...25, we have to subtract or add 26.)
 
 The replacement remains the same throughout the message, so the cipher is classed as a type of monoalphabetic substitution, as opposed to polyalphabetic substitution.
