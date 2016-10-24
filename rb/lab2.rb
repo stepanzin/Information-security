@@ -22,7 +22,7 @@ def Feistel_cipher(text, key, round)
  	  array_b << ch.unpack("B*")[0]
 	end
 
-	(round-1).times do 
+	(round-1).times do
 		array_b.each do |b|
 		  left = b[0...b.size/2]
 		  right = b[b.size/2...b.size]
@@ -43,10 +43,6 @@ def Feistel_cipher(text, key, round)
 		b[b.size/2...b.size] = right
 	end
 
-	#array_b.map!  do |ch|
-	#  (ch.convert_base(2, 10).to_i % 128).to_s(2).rjust(8, '0') # перевод бинарных чисел в бинарные числа
-	  # выводимых консолью символов	
-	#end
 	coded = [array_b.join("")].pack("B*")
 	puts "Coded:"
 	puts coded
@@ -61,13 +57,13 @@ def Feistel_cipher_decode(text, key, round)
  	  array_b << ch.unpack("B*")[0]
 	end
 
-	(round-1).times do 
+	(round-1).times do
 		array_b.each do |b|
 		  left = b[0...b.size/2]
 		  right = b[b.size/2...b.size]
 		  buf = right
 		  right = left
-		  left = xor(xor(left, key), buf)		  
+		  left = xor(xor(left, key), buf)
 		  b[0...b.size/2] = left
 		  b[b.size/2...b.size] = right
 		end
@@ -77,7 +73,6 @@ def Feistel_cipher_decode(text, key, round)
 	array_b.each do |b|
 		left = b[0...b.size/2]
 		right = b[b.size/2...b.size]
-		#puts "key #{key}" 
 		right = xor(xor(left, key), right)
 		b[b.size/2...b.size] = right
 	end
