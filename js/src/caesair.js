@@ -1,38 +1,42 @@
-'use strict'
-
 import {
-  mod
+  mod,
 } from './support.js'
 
 const crypt = (str, shift) => {
   return str.split('').map(el => {
-    let e = el.charCodeAt()
-    if (47 < e && 58 > e)
+    const e = el.charCodeAt()
+    if (47 < e && 58 > e) {
       return String.fromCharCode(48 + mod((e + shift - 48), 10))
-    else if (64 < e && 90 > e)
+    }
+    else if (64 < e && 90 > e) {
       return String.fromCharCode(65 + mod((e + shift - 65), 26))
-    else if (96 < e && 123 > e)
+    }
+    else if (96 < e && 123 > e) {
       return String.fromCharCode(97 + mod((e + shift - 97), 26))
+    }
     return String.fromCharCode(e)
   }).join('')
 }
 
 const decrypt = (str, shift) => {
   return str.split('').map(el => {
-    let e = el.charCodeAt()
-    if (47 < e && 58 > e)
+    const e = el.charCodeAt()
+    if (47 < e && 58 > e) {
       return String.fromCharCode(48 + mod((e - shift - 48), 10))
-    else if (64 < e && 90 > e)
+    }
+    else if (64 < e && 90 > e) {
       return String.fromCharCode(65 + mod((e - shift - 65), 26))
-    else if (96 < e && 123 > e)
+    }
+    else if (96 < e && 123 > e) {
       return String.fromCharCode(97 + mod((e - shift - 97), 26))
+    }
     return String.fromCharCode(e)
   }).join('')
 }
 
-let pangram = "Pack my 98 box with five dozen liquor jugs. 135!"
-let cesairp3 = 3
-let cesairp8 = 8
+const pangram = 'Pack my 98 box with five dozen liquor jugs. 135!'
+const cesairp3 = 3
+const cesairp8 = 8
 let crypted = ''
 let decrypted = ''
 
