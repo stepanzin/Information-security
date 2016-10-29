@@ -40,6 +40,19 @@ const randomKeyBin = len => {
   return text
 }
 
+const randomHalfByteKey = () => {
+  let text = ''
+  let q = 0
+  for (let i = 0; i < 4; i++) {
+    const char = (Math.random() >= 0.5) ? 1 : 0
+    if (char) { q++ }
+    text += char
+  }
+  if (q % 2 === 0) { return text }
+
+  return randomHalfByteKey()
+}
+
 const strToBin = str => {
   return str.split('').map(e => {
     const bin = e.charCodeAt(0).toString(2)
@@ -65,4 +78,5 @@ export {
   randomIntUnicArray,
   strToBin,
   binToStr,
+  randomHalfByteKey,
 }
