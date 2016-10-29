@@ -1,12 +1,13 @@
 # Basic Information Security algorithms on Github
+
+In this repository, you can find basic encryption algorithms implemented in JavaScript, Ruby and Python
+
+#### Requires
 [![Node.JS](https://img.shields.io/badge/Node.JS-%3E%3D4.0-brightgreen.svg)](https://nodejs.org)
 [![Ruby](https://img.shields.io/badge/Ruby-%3E2.0-red.svg)](https://www.ruby-lang.org/)
 [![Python](https://img.shields.io/badge/Python-%3E%3D%203.0-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-In this repository, you can find basic encryption algorithms implemented in JavaScript, Ruby and Python
-
-##Caesar cipher (or Vigenere  cipher) ([Wiki](https://en.wikipedia.org/wiki/Caesar_cipher))
+## Caesar cipher (or Vigenere  cipher) ([Wiki](https://en.wikipedia.org/wiki/Caesar_cipher))
 
 In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
 
@@ -33,7 +34,7 @@ In cryptography, the simple XOR cipher is a type of additive cipher,[1] an encry
 
 #### XOR (&#8853;) Truth table
 | A  | B  | Output |
-|---|---|---|
+|---|---|:---:|
 | 0 | 0 | 0 |
 | 0 | 1 | 1 |
 | 1 | 0 | 1 |
@@ -46,7 +47,7 @@ In cryptography, a Feistel cipher is a symmetric structure used in the construct
 A Feistel network is an iterated cipher with an internal function called a round function.
 
 #### Cipher diagram
-![Encryption & Decryption diagram](https://github.com/stepanzin/Information-security/blob/master/docs/Feistel_cipher_diagram.png?raw=true)
+![Encryption & Decryption diagram](https://raw.githubusercontent.com/stepanzin/Information-security/master/docs/Feistel_cipher_diagram_en.png)
 
 
 ### JS Tech
