@@ -6,7 +6,7 @@
 
 In this repository, you can find basic encryption algorithms implemented in JavaScript, Ruby and Python
 
-##Caesar cipher ([Wiki](https://en.wikipedia.org/wiki/Caesar_cipher))
+##Caesar cipher (or Vigenere  cipher) ([Wiki](https://en.wikipedia.org/wiki/Caesar_cipher))
 
 In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
 
@@ -26,6 +26,28 @@ Decryption is performed similarly,
 (There are different definitions for the modulo operation. In the above, the result is in the range 0...25. I.e., if *x+n* or *x-n* are not in the range 0...25, we have to subtract or add 26.)
 
 The replacement remains the same throughout the message, so the cipher is classed as a type of monoalphabetic substitution, as opposed to polyalphabetic substitution.
+
+## XOR cipher ([Wiki](https://en.wikipedia.org/wiki/XOR_cipher))
+
+In cryptography, the simple XOR cipher is a type of additive cipher,[1] an encryption algorithm that operates according to the principles, where &#8853; denotes the exclusive disjunction (XOR) operation. This operation is sometimes called modulus 2 addition (or subtraction, which is identical). With this logic, a string of text can be encrypted by applying the bitwise XOR operator to every character using a given key. To decrypt the output, merely reapplying the XOR function with the key will remove the cipher.
+
+#### XOR (&#8853;) Truth table
+| A  | B  | Output |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+## Feistel cipher ([Wiki](https://en.wikipedia.org/wiki/Feistel_cipher))
+
+In cryptography, a Feistel cipher is a symmetric structure used in the construction of block ciphers, named after the German-born physicist and cryptographer Horst Feistel who did pioneering research while working for IBM (USA); it is also commonly known as a Feistel network. A large proportion of block ciphers use the scheme, including the Data Encryption Standard (DES). The Feistel structure has the advantage that encryption and decryption operations are very similar, even identical in some cases, requiring only a reversal of the key schedule. Therefore, the size of the code or circuitry required to implement such a cipher is nearly halved.
+
+A Feistel network is an iterated cipher with an internal function called a round function.
+
+#### Cipher diagram
+![Encryption & Decryption diagram](https://github.com/stepanzin/Information-security/blob/master/docs/Feistel_cipher_diagram.png?raw=true)
+
 
 ### JS Tech
 <img src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png" height="100" alt="Gulp">   
