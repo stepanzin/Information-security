@@ -134,4 +134,4 @@ if text.size % 8 != 0
   text = text + "@"*q
 end
 
-gost(text, KEY)
+gost(text, random_key)
