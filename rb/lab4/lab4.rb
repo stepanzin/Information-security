@@ -1,6 +1,19 @@
 require '../math'
 
-secret_key = [5, 12, 20, 40, 80, 160, 320, 640]
+#secret_key = [5, 12, 20, 40, 80, 160, 320, 640]
+
+def generate_secret_key
+	n = 8
+	arr = [Random.rand(10)]
+	n.times do
+		min = arr.reduce(:+)
+		max = min + Random.rand(10)
+		arr.push(Random.rand(min..max))
+	end
+ arr
+end
+
+secret_key = generate_secret_key
 
 def knapsack(text, l, secret_key)
   open_key = []	
