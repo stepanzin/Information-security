@@ -41,3 +41,21 @@ def invmod(e, et)
   x % et
 end
 
+def find_multiplier(num)
+  array = []
+  (2..num).each do |i| 
+    array << num/i if num % i == 0
+  end
+  array.sample
+end
+
+def find_prime_multiplier(num)
+  array = []
+  (2..num).each do |i| 
+    array << num/i if num % i == 0
+  end
+  s = []
+  array.each do |m|
+    return m if prime?(m)
+  end
+end
