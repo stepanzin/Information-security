@@ -19,4 +19,4 @@ gulp.task('ES6', () => {
     }))
     .pipe(babel())
     .pipe(gulp.dest(path.destPath));
-});
+}); 

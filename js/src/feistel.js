@@ -1,7 +1,6 @@
 'use strict'
 
 import {
-  randomInt,
   strToBin,
   binToStr,
   randomHalfByteKey,
@@ -116,5 +115,5 @@ class Feistel {
 const cipher = new Feistel('run the jewel', 6, randomHalfByteKey())
 const q = cipher.crypt()
 const p = cipher.decrypt()
-console.log(JSON.stringify(q))
-console.log(JSON.stringify(p))
+console.log(JSON.stringify(q.result))
+console.log(JSON.stringify(p.result))
