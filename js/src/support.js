@@ -145,6 +145,7 @@ export {
   gcd,
   xgcd,
   invmod,
+  isPrime,
   mod,
   findCoprime,
   randomInt,
